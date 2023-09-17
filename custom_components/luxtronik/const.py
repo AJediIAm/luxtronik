@@ -146,7 +146,7 @@ class LuxStatus3Option(StrEnum):
     cooling: Final = ("cooling",)
     swimming_pool_solar: Final = ("swimming pool/solar",)
     heating_external_energy_source: Final = ("heating external energy source",)
-    water_heaterexternal_energy_source: Final = (
+    water_heater_external_energy_source: Final = (
         "water heater external energy source",
     )
     flow_monitoring: Final = ("flow monitoring",)
