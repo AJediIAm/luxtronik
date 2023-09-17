@@ -60,7 +60,7 @@ class DeviceKey(StrEnum):
 
     heatpump: Final = "heatpump"
     heating: Final = "heating"
-    domestic_water: Final = "domestic_water"
+    water_heater: Final = "water heater"
     cooling: Final = "cooling"
 
 
@@ -94,7 +94,7 @@ class LuxOperationMode(StrEnum):
     """Lux Operation modes heating, hot water etc."""
 
     heating: Final = "heating"  # 0
-    domestic_water: Final = "hot water"  # 1
+    water_heater: Final = "hot water"  # 1
     swimming_pool_solar: Final = "swimming pool/solar"  # 2
     evu: Final = "evu"  # 3
     defrost: Final = "defrost"  # 4
@@ -138,7 +138,7 @@ class LuxStatus3Option(StrEnum):
     grid_switch_on_delay: Final = ("grid switch on delay",)
     cycle_lock: Final = ("cycle lock",)
     lock_time: Final = ("lock time",)
-    domestic_water: Final = ("domestic water",)
+    water_heater: Final = ("water heater",)
     info_bake_out_program: Final = ("info bake out program",)
     defrost: Final = ("defrost",)
     pump_forerun: Final = ("pump forerun",)
@@ -146,8 +146,8 @@ class LuxStatus3Option(StrEnum):
     cooling: Final = ("cooling",)
     swimming_pool_solar: Final = ("swimming pool/solar",)
     heating_external_energy_source: Final = ("heating external energy source",)
-    domestic_water_external_energy_source: Final = (
-        "domestic water external energy source",
+    water_heaterexternal_energy_source: Final = (
+        "water heater external energy source",
     )
     flow_monitoring: Final = ("flow monitoring",)
     second_heat_generator_1_active: Final = ("second heat generator 1 active",)
@@ -184,7 +184,7 @@ class LuxRoomThermostatType(Enum):
 
 LUX_STATE_ICON_MAP: Final[dict[StateType | date | datetime | Decimal, str]] = {
     LuxOperationMode.heating.value: "mdi:radiator",
-    LuxOperationMode.domestic_water.value: "mdi:waves",
+    LuxOperationMode.water_heater.value: "mdi:waves",
     LuxOperationMode.swimming_pool_solar.value: "mdi:pool",
     LuxOperationMode.evu.value: "mdi:power-plug-off",
     LuxOperationMode.defrost.value: "mdi:car-defrost-rear",
@@ -473,7 +473,7 @@ class SensorKey(StrEnum):
     HEATING = "heating"
     PUMP_OPTIMIZATION = "pump_optimization"
     HEATING_THRESHOLD = "heating_threshold"
-    DOMESTIC_WATER = "domestic_water"
+    WATER_HEATER = "water_heater"
     COOLING = "cooling"
     RELEASE_SECOND_HEAT_GENERATOR = "release_second_heat_generator"
     RELEASE_TIME_SECOND_HEAT_GENERATOR = "release_time_second_heat_generator"
