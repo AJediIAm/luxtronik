@@ -20,8 +20,8 @@ jobs:
 
     steps:
     - name: Checkout code
-    - uses: actions/checkout@v4
-    - with: 
+      uses: actions/checkout@v4
+      with: 
         fetch-depth: 0
         
     - name: Set up Python ${{ matrix.python-version }}
@@ -36,6 +36,11 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Set PYTHONPATH
       run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
+
+    - name: Format with Black
+      uses: rickstaa/action-black@v1.3.3
+      with: 
+        options: "--check --diff"
     
     - name: Lint with flake8
       run: |
