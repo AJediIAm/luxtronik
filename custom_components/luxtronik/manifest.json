@@ -2,7 +2,7 @@
   "domain": "luxtronik2",
   "name": "Luxtronik",
   "config_flow": true,
-  "documentation": "https://www.home-assistant.io/integrations/luxtronik",
+  "documentation": "https://github.com/BenPru/luxtronik",
   "requirements": [
     "luxtronik==0.3.14",
     "requests>=2.28.2",
