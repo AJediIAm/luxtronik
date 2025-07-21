@@ -53,9 +53,6 @@ jobs:
           commit_message: "Fix(format): Apply Ruff formatting [skip ci]" # '[skip ci]' prevents infinite loops
           branch: ${{ github.ref_name }} # Push back to the 'main' branch
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
 
       - name: Run Ruff Lint Check
         # By default, astral-sh/ruff-action runs 'ruff check'.
