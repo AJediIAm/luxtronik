@@ -31,14 +31,9 @@ jobs:
         python-version: ["3.13"]
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
-      - name: ruff
-        uses: astral-sh/ruff-action@v3
-      - name: Flake8
-        uses: suo/flake8-github-action@v1
+      - uses: astral-sh/ruff-action@v3
+#      - name: Flake8
+#        uses: suo/flake8-github-action@v1
       - name: codespell
         uses: codespell-project/actions-codespell@v2
 
