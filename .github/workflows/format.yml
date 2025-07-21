@@ -1,6 +1,6 @@
 # .github/workflows/format.yml
 # Automatically apply formatting when pushing to main.
-name: Format
+name: Ruff Auto-format
 
 on:
   push:
@@ -14,14 +14,14 @@ jobs:
     name: Ruff Auto-formatting
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write # Needed for stefanzweifel/git-auto-commit-action to push changes
+#    permissions:
+#      contents: write # Needed for stefanzweifel/git-auto-commit-action to push changes
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Needed for auto-commit action to work reliably
+#        with:
+#          fetch-depth: 0 # Needed for auto-commit action to work reliably
 
       - name: Set up Python ${{ env.DEFAULT_PYTHON }}
         uses: actions/setup-python@v5
@@ -33,7 +33,7 @@ jobs:
         uses: astral-sh/ruff-action@v3
         with:
           args: "--version" # override ruff check
-        continue-on-error: true # Uncomment if you want the workflow to pass even if linting fails
+#        continue-on-error: true # Uncomment if you want the workflow to pass even if linting fails
         
       - run: ruff check --fix-only
       - run: ruff format
