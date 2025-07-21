@@ -23,8 +23,7 @@ jobs:
         uses: kgpl/gh-pylint@v1
         with: 
           python-version: 3.13
-
-jobs:
+          
   run-super-lintrr:
     runs-on: ubuntu-latest
     steps:
