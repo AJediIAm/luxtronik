@@ -35,5 +35,5 @@ jobs:
           args: "--version" # override ruff check
         continue-on-error: true # Uncomment if you want the workflow to pass even if linting fails
         
-      - run: ruff check --fix
+      - run: ruff check --fix-only
       - run: ruff format
