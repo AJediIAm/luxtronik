@@ -1,4 +1,4 @@
-# .github/workflows/formal.yml
+# .github/workflows/format.yml
 # Automatically apply formatting when pushing to main.
 name: Format
 
@@ -33,7 +33,7 @@ jobs:
         uses: astral-sh/ruff-action@v3
         with:
           args: "--version" # override ruff check
-        # continue-on-error: true # Uncomment if you want the workflow to pass even if linting fails
+        continue-on-error: true # Uncomment if you want the workflow to pass even if linting fails
         
       - run: ruff check --fix
       - run: ruff format
